@@ -92,19 +92,14 @@ Lexer::Lexer(const char* fn)
     seps.insert({')', Token::TokenType::TOKEN_RPAREN});
     seps.insert({'{', Token::TokenType::TOKEN_LBRACE});
     seps.insert({'}', Token::TokenType::TOKEN_RBRACE});
-    seps.insert({'[', Token::TokenType::TOKEN_LBRACKET});
-    seps.insert({']', Token::TokenType::TOKEN_RBRACKET});
+    /* FIXME support "[" and "]" */
 
     // fill pre-defined keywords
-    keywords.insert({"return", Token::TokenType::TOKEN_RETURN});
-
     keywords.insert({"void", Token::TokenType::TOKEN_DES_VOID});
     keywords.insert({"int", Token::TokenType::TOKEN_DES_INT});
     keywords.insert({"float", Token::TokenType::TOKEN_DES_FLOAT});
 
-    keywords.insert({"if", Token::TokenType::TOKEN_IF});
-    keywords.insert({"else", Token::TokenType::TOKEN_ELSE});
-    keywords.insert({"for", Token::TokenType::TOKEN_FOR});
+    /* FIXME support "return", "if", "else", "for" */
 }
 
 bool Lexer::getToken(Token &tok)
@@ -159,9 +154,9 @@ void Lexer::parseLine(std::string &line)
     // Extract all the tokens from the current line
     for (auto iter = line.begin(); iter != line.end(); iter++)
     {
-        // (1) skip space, tab, and comments
+        // (1) skip space, tab
         if (*iter == ' ' || *iter == '\t') continue;
-        if (*iter == '/'  && *(iter + 1) == '/') break;
+        /* FIXME skip comments */
 
         // start to process token
         std::string cur_token_str(1, *iter);
