@@ -484,7 +484,7 @@ void Codegen::forGen(std::string& parent_func_name, Statement *_statement)
     builder->CreateBr(check_BB);
     builder->SetInsertPoint(check_BB);
 
-    auto end_cond = condGen(for_s->getEnd());
+    auto end_cond = condGen(for_s->getStopCond());
     builder->CreateCondBr(end_cond, body_BB, merge_BB);
     
     // Generate code for the loop body
