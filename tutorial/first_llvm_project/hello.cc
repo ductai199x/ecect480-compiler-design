@@ -34,7 +34,8 @@ int main(int argc, char** argv)
     {
         if (!i->isDeclaration())
         {
-            outs() << i->getName() << "\n";
+            outs() << "Function name: " << i->getName() << "\n";
+	    outs() << "Number of lines: " << i->getInstructionCount() << "\n";
         }
     }
 
