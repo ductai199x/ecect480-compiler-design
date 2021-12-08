@@ -1,0 +1,14 @@
+// Expression evaluation with unary operators 
+// Author: Naga Kandasamy
+
+int main()
+{
+	int a = +5 --(10 + 20)/-3;
+	int x = --10 + -5;
+	float y = -10.5 --2.0;
+	
+	printVarInt(x);
+    printVarFloat(y);
+
+    return 0;
+}

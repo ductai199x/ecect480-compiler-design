@@ -1,0 +1,23 @@
+// factorial = n * (n - 1) * (n - 2) * ... * 1
+// Author: Naga Kandasamy
+
+int factorial(int n) 
+{
+    int prod = 1;
+
+    for (int i = 2; i <= n; i = i + 1) {
+        prod = prod * i;
+    }
+
+    return prod;
+}
+
+int main() {
+    int n = 5;
+
+    int f = factorial(n);
+    printVarInt(f);
+
+    return 0;
+
+}

@@ -1,0 +1,19 @@
+// Simple sum: z = x + y
+// Author: Naga Kandasamy
+
+int sum(int a, int b)
+{
+	return a + b;
+}
+
+int main()
+{
+	int x = 10;
+	int y = 15;
+	
+	int z = sum(x, y);
+
+	printVarInt(z);
+
+	return 0;
+}
