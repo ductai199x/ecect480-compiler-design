@@ -14,6 +14,7 @@ LD	+= `llvm-config --libs bitwriter`
 all: $(TARGET)
 
 $(TARGET): $(SOURCE)
+	mkdir -p $(ROOT)/codegen/out
 	$(CC) $(FLAGS) $(SOURCE) -o $(TARGET) $(LD)
 
 clean:

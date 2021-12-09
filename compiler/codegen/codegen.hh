@@ -101,6 +101,7 @@ class Codegen
     Value* condGen(Condition*);
     void ifGen(std::string&,Statement *);
     void forGen(std::string&,Statement *);
+    void whileGen(std::string&,Statement *);
 
     Value* allocaForIden(std::string&,
                          ValueType::Type&,
