@@ -9,7 +9,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "/home/llvm/ECET480/compiler/parser/parser",
-            "args": ["/home/llvm/ECET480/compiler/parser/series_sum_using_for.txt"],
+            "args": ["/home/llvm/ECET480/compiler/parser/selection_sort.txt"],
             "stopAtEntry": true,
             "cwd": "${fileDirname}",
             "environment": [],

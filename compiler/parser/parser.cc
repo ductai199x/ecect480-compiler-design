@@ -589,6 +589,10 @@ namespace Frontend
                                            step_stmt,
                                            for_block_codes,
                                            for_block_local_vars);
+
+        assert(cur_token.isTokenRBrace());
+        local_vars_tracker.pop_back();
+
         return for_statement;
     }
 
@@ -634,6 +638,10 @@ namespace Frontend
             std::make_unique<WhileStatement>(continue_cond,
                                              while_block_codes,
                                              while_block_local_vars);
+
+        assert(cur_token.isTokenRBrace());
+        local_vars_tracker.pop_back();
+        
         return while_statement;
     }
 
